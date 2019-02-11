@@ -1,2 +1,3 @@
 # GcHwEmulator
-H/W gamepad emulator for GameControllerizer
+H/W gamepad emulator for GameControllerizer  
+under construction...
