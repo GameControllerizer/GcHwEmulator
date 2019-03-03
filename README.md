@@ -1,12 +1,8 @@
 # GcHwEmulator
 [GameControllerizer](https://github.com/GameControllerizer/GameControllerizer) の中核をなすH/W ゲームパッドエミュレーターです．本製品をUSBケーブルでPCやゲーム機に接続するとUSB HID互換ゲームパッドとして振舞います．さらにこれを micro:bit や Raspberry Pi から操作することで，ディジタルゲームへの操作入力を自在にプログラミングすることが可能です．
-
-## Buy now
-2019年3月中の一般頒布開始を予定しています．
-
-## Features
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-v1_features.png" width="540px">
 
+## Features
 - Grove connector : 本製品を micro:bit と接続するときに使用します．
 - 40-pin connector : 本製品を Raspberry Pi シリーズと接続するときに使います．
 - Reset switch : 押し込みでリセットがかかります．
@@ -16,6 +12,17 @@
     - CMD(orange) : micro:bit や RasPi からコマンドを受信すると点滅します
     - RESET(red) : リセットがかかると点灯します
 - Solder jumpers : ※回路図を参考に，くれぐれも自己責任でお使いください
+
+## Spec
+- NXP LPC11U35  Cortex-M0
+- USB x 1, Grove con. x 1, 40-pin con.  x 1
+- Status LED (Power, Command, Reset)
+- Reset switch, Tactile switch[0:3]
+- Size：65mm x 30mm
+- Schematics：[gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
+
+## Buy now
+2019年3月中の一般頒布開始を予定しています．
 
 ## Usage
 1. 本製品/ゲームコンソール / ホストマイコン（micro:bit / RasPi） と接続します（下図）
@@ -46,8 +53,14 @@
 
 制御方法については [Node-RED nodes](https://github.com/GameControllerizer/node-red-contrib-game_controllerizer) を参照ください．
 
-## Resources
-- [Schematics (ver. 1.1)](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
+
+## FAQ
+### H/W gamepad emulator に接続可能なゲームコンソールは何ですか？
+GameControllerizerのH/W gamepad emulatorは **"一般的に市販されている汎用USB HID互換ゲームパッド"** を模擬します．**USB HID互換ゲームパッドからの入力を受け付けるかどうかは各ゲームコンソール / 各ゲームソフトに依存します**．そのため "どの環境ならば動く" と言うことは困難です．本製品を購入前に，対象とするゲームコンソール / ゲームソフトにて事前に確認いただきますようお願いいたします．なお本件を理由とした返品・交換は致しかねます．  
+また一部ゲームコンソールについてはコンバーターを利用することで動作したことはありますが，「どのコンバーターならば動くか？」といった情報も定かではありません．動作実績情報をお寄せいただければ幸いです．
+
+### 技術サポートはありますか？
+技術サポートは致しかねます．免責事項にありますとおり，ご自分で問題に対処できる方への販売を前提としています．ただし，大学・企業・教育/研究機関等で多数ご利用の場合に限り対応させていただける可能性ございます．[津田塾大学 栗原研究室](http://www.unryu.org/home) もしくは gamecontrollerizer(at)gmail.com までご相談ください．
 
 ## Notice
 - 本製品は研究者・教育関係者・開発者向けの製品となっています．本WebサイトおよびGitHub上の技術情報を読んでいただいた上でご自身の責任でご使用下さい．
