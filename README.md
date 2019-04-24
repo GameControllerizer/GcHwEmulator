@@ -22,7 +22,7 @@
 - Schematics：[gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
 
 ## Buy now
-2019年3月中の一般頒布開始を予定しています．
+[SwichScience様](https://www.switch-science.com/catalog/5457/)にて委託販売中です（税込 3,240円）．
 
 ## Usage
 1. 本製品/ゲームコンソール / ホストマイコン（micro:bit / RasPi） と接続します（下図）
@@ -67,7 +67,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 - 本製品または本製品向けライブラリ（Node-RED nodes, Makcode package) を使用して発生した直接的・間接的な損害に対するその種類，規模を問わず補償は致しかねます．
 - 技術サポートは致しかねます．ただし，大学・企業・教育/研究機関等で多数ご利用の場合に限り対応させていただける可能性ございます．[津田塾大学 栗原研究室](http://www.unryu.org/home) もしくは gamecontrollerizer(at)gmail.com までご相談ください．
 - 製品の価格・外観・仕様等について予告なく変更される可能性がございます．
-- 運送上のトラブルに関し，運送会社の補償以上の対応は致しかねます．
+- 返品，キャンセル，返金等については各委託販売会社の規則に準じます．
 - 初期不良品交換のみ対応いたします（到着後2週間以内）．それ以外の故障・相性問題等を理由とした交換・原因追及は致しかねます．
 - 購入される方は，上記をご理解いただいたものとさせていただきます．
 
