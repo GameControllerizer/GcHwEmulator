@@ -22,7 +22,7 @@
 - Schematics：[gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
 
 ## Buy now
-[SwichScience様](https://www.switch-science.com/catalog/5457/)にて委託販売中です（税込 3,240円）．
+[SwichScience様](https://www.switch-science.com/catalog/5457/)にて委託販売中です（税込 3,300円）．
 
 ## Usage
 1. 本製品/ゲームコンソール / ホストマイコン（micro:bit / RasPi） と接続します（下図）
