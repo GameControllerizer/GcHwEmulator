@@ -1,5 +1,6 @@
 # GcHwEmulator
 [GameControllerizer](https://github.com/GameControllerizer/GameControllerizer) の中核をなすH/W ゲームパッドエミュレーターです．本製品をUSBケーブルでPCやゲーム機に接続するとUSB HID互換ゲームパッドとして振舞います．さらにこれを micro:bit や Raspberry Pi から操作することで，ディジタルゲームへの操作入力を自在にプログラミングすることが可能です．
+
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-v1_1-features.png" width="540px">
 
 ## Features
@@ -76,7 +77,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 ## History
 
 ### ver. 1.1 (latest)
-<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_2.jpg" width="480px">
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_1.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
 - Grove connector (for micro:bit)
