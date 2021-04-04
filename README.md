@@ -1,31 +1,62 @@
 # GcHwEmulator
 [GameControllerizer](https://github.com/GameControllerizer/GameControllerizer) の中核をなすH/W ゲームパッドエミュレーターです．本製品をUSBケーブルでPCやゲーム機に接続するとUSB HID互換ゲームパッドとして振舞います．さらにこれを micro:bit や Raspberry Pi から操作することで，ディジタルゲームへの操作入力を自在にプログラミングすることが可能です．
+用途に合わせて２種類を用意しています．
+
+## (GC-GP) 汎用タイプ
+
+各種RasPiにマウントできる他，Groveコネクタを通じて多種の基板に接続が可能です．
 
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-v1_1-features.png" width="540px">
 
+## (GC-MB) micro:bit専用タイプ
+
+micro:bit専用タイプです．micro:bit(v1/v2)にマウントできます．
+
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-mb-v1-features.png" width="540px">
+
+## Connection
+
+| Type |  GC-GP  |  GC-MB  |
+| ---- | ---- | ---- |
+|  to RasPi  |  ○ (40-pin) |  ☓ |
+|  to micro:bit  |  ○ (grove)  |  ○ (ring)  |
+|  to M5 |  ○ (grove) |  ☓  |
+
+※1 RasPi互換の40-pin connectorを持つ製品(NVIDIA Jetson等)も，GC-GPへ接続することが可能です  
+※2 基板の改造・配線の自作を行う場合はこの限りではありません
+
 ## Features
-- Grove connector : 本製品を micro:bit と接続するときに使用します．
-- 40-pin connector : 本製品を Raspberry Pi シリーズと接続するときに使います．
+- Grove connector(GC-GP) : 本製品を micro:bit と接続するときに使用します．
+- 40-pin connector(GC-GP) : 本製品を Raspberry Pi シリーズと接続するときに使います．
+- Ring connector(GC-MB) : 本製品を micro:bit と接続するときに使います．
 - Reset switch : 押し込みでリセットがかかります．
 - Tact switch[0:3] : ライブラリと組み合わせることで外部ボタンとして利用できます．
 - Status LED
     - PWR(green) : 電源が投入されると点灯します
     - CMD(orange) : micro:bit や RasPi からコマンドを受信すると点滅します
     - RESET(red) : リセットがかかると点灯します
-- Solder jumpers : ※回路図を参考に，くれぐれも自己責任でお使いください
+- Solder jumpers(GC-GP) : ※回路図を参考に，くれぐれも自己責任でお使いください
 
 ## Spec
 - NXP LPC11U35  Cortex-M0
 - USB x 1, Grove con. x 1, 40-pin con.  x 1
 - Status LED (Power, Command, Reset)
 - Reset switch, Tactile switch[0:3]
-- Size：65mm x 30mm
-- Schematics：[gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
+- Size
+    - (GC-GP) 65mm x 30mm 
+    - (GC-MB) 52mm x 42mm 
+- Schematics
+    - (GC-GP) [gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
+    - (GC-MB) [gc-mb-v1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-mb-v1_schematics.pdf)
 
 ## Buy now
-[SwichScience様](https://www.switch-science.com/catalog/5457/)にて委託販売中です（税込 3,300円）．
+[SwichScience様](https://www.switch-science.com/)にて委託販売中です（各税込 3,300円）．
+- [(GC-GP) 汎用タイプ](https://www.switch-science.com/catalog/5457/)
+- [(GC-BM) micro:bit専用タイプ](https://www.switch-science.com/catalog/5457/)
 
-## Usage
+---
+
+## Usage (GC-GP)
 1. 本製品/ゲームコンソール / ホストマイコン（micro:bit / RasPi） と接続します（下図）
 2. `Reset switch` を押します．初期化が正常になされるとされると `LED-CMD` が点滅します（3度）．
 3. ホストマイコンから本製品を通じて，ゲームコンソールへと制御信号を送ります．
@@ -33,7 +64,7 @@
 ### with micro:bit
 
 #### Requirements
-- BBC micro:bit
+- BBC micro:bit (v1/v2 で動作を確認しています)
 - Grove Shield for micro:bit
 - Grove 4-pin cable
 - USB cable (microB)
@@ -54,6 +85,26 @@
 
 制御方法については [Node-RED nodes](https://github.com/GameControllerizer/node-red-contrib-game_controllerizer) を参照ください．
 
+---
+
+## Usage (GC-MB)
+1. 本製品/ゲームコンソール / ホストマイコン（micro:bit） と接続します（下図）
+2. `Reset switch` を押します．初期化が正常になされるとされると `LED-CMD` が点滅します（3度）．
+3. ホストマイコンから本製品を通じて，ゲームコンソールへと制御信号を送ります．
+
+### with micro:bit
+
+#### Requirements
+- BBC micro:bit (v1/v2 で動作を確認しています)
+- 六角スペーサー・ネジ・ナット (M3 x 4本)
+- USB cable (microB)
+
+#### Connection
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/connection-gc-mb.png" width="540px">
+
+制御方法については [Makcode package](https://github.com/GameControllerizer/pxt-gamecontrollerizer) を参照ください．
+
+---
 
 ## FAQ
 #### H/W gamepad emulator に接続可能なゲームコンソールは何ですか？
@@ -76,7 +127,15 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 
 ## History
 
-### ver. 1.1 (latest)
+### (GC-MB) ver. 1.0 (latest)
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-mb-v1.jpg" width="480px">
+
+- LPC11U35 Cortex-M0
+- Ring connector (for micro:bit)
+- 4 tactile switches
+- HID gamepad emulation
+
+### (GC-GP) ver. 1.1 (latest)
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_1.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
@@ -85,7 +144,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 - 4 tactile switches
 - HID gamepad emulation
 
-### ver. 0.0 (prototype, DISCONTINUED)
+### (GC-GP) ver. 0.0 (prototype, DISCONTINUED)
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v0.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
