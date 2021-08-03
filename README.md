@@ -4,9 +4,9 @@
 
 ## (GC-GP) 汎用タイプ
 
-各種RasPiにマウントできる他，Groveコネクタを通じて多種の基板に接続が可能です．
+各種RasPiにマウントできる他，Groveコネクタを通じて多種の基板に接続が可能です．ver. 1.2 より基板色が赤→青へ変更されましたが，機能変更はありません．
 
-<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-v1_1-features.png" width="540px">
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/gc-v1_2-features.png" width="540px">
 
 ## (GC-MB) micro:bit専用タイプ
 
@@ -46,13 +46,13 @@ micro:bit専用タイプです．micro:bit(v1/v2)にマウントできます．
     - (GC-GP) 65mm x 30mm 
     - (GC-MB) 52mm x 42mm 
 - Schematics
-    - (GC-GP) [gc-v1_1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_1_schematics.pdf)
+    - (GC-GP) [gc-v1_2_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-v1_2_schematics.pdf)
     - (GC-MB) [gc-mb-v1_schematics.pdf](https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/resources/gc-mb-v1_schematics.pdf)
 
 ## Buy now
 [SwichScience様](https://www.switch-science.com/)にて委託販売中です（各税込 3,300円）．
 - [(GC-GP) 汎用タイプ](https://www.switch-science.com/catalog/5457/)
-- [(GC-BM) micro:bit専用タイプ](https://www.switch-science.com/catalog/5457/)
+- [(GC-BM) micro:bit専用タイプ](https://www.switch-science.com/catalog/7150/)
 
 ---
 
@@ -127,6 +127,11 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 
 ## History
 
+### (GC-GP) ver. 1.2 (latest)
+<img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_2.jpg" width="480px">
+
+- Same as ver. 1.1
+
 ### (GC-MB) ver. 1.0 (latest)
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-mb-v1.jpg" width="480px">
 
@@ -135,7 +140,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 - 4 tactile switches
 - HID gamepad emulation
 
-### (GC-GP) ver. 1.1 (latest)
+### (GC-GP) ver. 1.1
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_1.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
