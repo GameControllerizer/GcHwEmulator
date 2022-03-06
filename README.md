@@ -1,5 +1,5 @@
 # GcHwEmulator
-[GameControllerizer](https://github.com/GameControllerizer/GameControllerizer) の中核をなすH/W ゲームパッドエミュレーターです．本製品をUSBケーブルでPCやゲーム機に接続するとUSB HID互換ゲームパッドとして振舞います．さらにこれを micro:bit や Raspberry Pi から操作することで，ディジタルゲームへの操作入力を自在にプログラミングすることが可能です．
+[GameControllerizer](https://github.com/GameControllerizer/GameControllerizer) の中核をなすH/W ゲームパッドエミュレーターです．本製品をUSBケーブルでPCやゲーム機に接続するとUSB HID互換ゲームパッド（DirectInput入力方式）として振舞います．さらにこれを micro:bit や Raspberry Pi から操作することで，ディジタルゲームへの操作入力を自在にプログラミングすることが可能です．
 用途に合わせて２種類を用意しています．
 
 ## (GC-GP) 汎用タイプ
@@ -18,9 +18,9 @@ micro:bit専用タイプです．micro:bit(v1/v2)にマウントできます．
 
 | Type |  GC-GP  |  GC-MB  |
 | ---- | ---- | ---- |
-|  to RasPi  |  ○ (40-pin) |  ☓ |
+|  to RasPi  |  ○ (40-pin) | x |
 |  to micro:bit  |  ○ (grove)  |  ○ (ring)  |
-|  to M5 |  ○ (grove) |  ☓  |
+|  to M5 |  ○ (grove) | x |
 
 ※1 RasPi互換の40-pin connectorを持つ製品(NVIDIA Jetson等)も，GC-GPへ接続することが可能です  
 ※2 基板の改造・配線の自作を行う場合はこの限りではありません
@@ -108,7 +108,7 @@ micro:bit専用タイプです．micro:bit(v1/v2)にマウントできます．
 
 ## FAQ
 #### H/W gamepad emulator に接続可能なゲームコンソールは何ですか？
-GameControllerizerのH/W gamepad emulatorは **"一般的に市販されている汎用USB HID互換ゲームパッド"** を模擬します．**USB HID互換ゲームパッドからの入力を受け付けるかどうかは各ゲームコンソール / 各ゲームソフトに依存します**．そのため "どの環境ならば動く" と言うことは困難です．本製品を購入前に，対象とするゲームコンソール / ゲームソフトにて事前に確認いただきますようお願いいたします．なお本件を理由とした返品・交換は致しかねます．  
+GameControllerizerのH/W gamepad emulatorは **"一般的に市販されている汎用USB HID互換ゲームパッド（DirectInput入力方式）"** を模擬します．**この入力を受け付けるかどうかは各ゲームコンソール / 各ゲームソフトに依存します**．そのため "どの環境ならば動く" と言うことは困難です．本製品を購入前に，対象とするゲームコンソール / ゲームソフトにて事前に確認いただきますようお願いいたします．なお本件を理由とした返品・交換は致しかねます．  
 また一部ゲームコンソールについてはコンバーターを利用することで動作したことはありますが，「どのコンバーターならば動くか？」といった情報も定かではありません．動作実績情報をお寄せいただければ幸いです．
 
 #### 技術サポートはありますか？
