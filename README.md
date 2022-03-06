@@ -140,7 +140,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 - 4 tactile switches
 - HID gamepad emulation
 
-### (GC-GP) ver. 1.1
+### (GC-GP) ver. 1.1 (EOL)
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v1_1.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
@@ -149,7 +149,7 @@ GameControllerizerのH/W gamepad emulatorは **"一般的に市販されてい�
 - 4 tactile switches
 - HID gamepad emulation
 
-### (GC-GP) ver. 0.0 (prototype, DISCONTINUED)
+### (GC-GP) ver. 0.0 (prototype)
 <img src="https://raw.githubusercontent.com/wiki/GameControllerizer/GcHwEmulator/images/history-v0.jpg" width="480px">
 
 - LPC11U35 Cortex-M0
